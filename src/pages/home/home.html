@@ -1,14 +1,49 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Voice Control Robot
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <button ion-button (click)="scanBT()" [color]="scanStarted ? 'danger' : 'primary'">{{scanStatus}} &nbsp;<ion-icon name="bluetooth"></ion-icon></button>
+  <button ion-button [color]="isConnected ? 'secondary' : 'danger'" clear>{{status}}</button>
+ 
+
+  <p text-center>{{tabStatus}}</p>
+  
+
+      <ion-row>
+        <ion-col col-4>
+        </ion-col>
+        <ion-col col-4 justify-content-center>
+            <div class="row">
+              <div class="col" padding>
+                  <button class="toggleMe" id="change" ion-button round (click)="action()" [color]="isRecording ? 'danger' : 'primary'" large><ion-icon name="mic"></ion-icon></button>
+              </div>
+            </div>
+        </ion-col>
+        <ion-col col-4>
+        </ion-col>
+      </ion-row>
+
+        <ion-card-header>Voice Command</ion-card-header>
+          <ion-list>
+            <ion-item *ngFor="let match of matches">
+              {{ match }}
+            </ion-item>
+          </ion-list>
+
+      <ion-list no-lines>
+        <ion-list-header>Available Devices</ion-list-header>
+          <div *ngIf="!deviceAvailable">
+              <button ion-item *ngFor="let device of devices" (click)="selectDevice(device)">
+                  {{ device.name }}
+              </button> 
+          </div> 
+      </ion-list>
+
+  
+  
 </ion-content>

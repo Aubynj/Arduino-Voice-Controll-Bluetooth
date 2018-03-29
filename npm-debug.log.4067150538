@@ -1,0 +1,47 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'i',
+1 verbose cli   '-g',
+1 verbose cli   'ionic@latest' ]
+2 info using npm@3.10.10
+3 info using node@v9.6.1
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData ionic@latest
+8 silly fetchNamedPackageData ionic
+9 silly mapToRegistry name ionic
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'ionic',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   escapedName: 'ionic',
+12 silly mapToRegistry   name: 'ionic',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri https://registry.npmjs.org/ionic
+14 verbose request uri https://registry.npmjs.org/ionic
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 15:48:35
+17 verbose request id e83517a3332cda5d
+18 verbose etag "5ab4267b-20a32a"
+19 verbose lastModified Thu, 22 Mar 2018 21:56:11 GMT
+20 http request GET https://registry.npmjs.org/ionic
+21 verbose stack Error: write EIO
+21 verbose stack     at _errnoException (util.js:1003:13)
+21 verbose stack     at WriteWrap.afterWrite [as oncomplete] (net.js:852:14)
+22 verbose cwd /var/www/IonicPro/ArduinoVoiceProject
+23 error Linux 4.4.0-116-generic
+24 error argv "/usr/local/bin/node" "/usr/bin/npm" "i" "-g" "ionic@latest"
+25 error node v9.6.1
+26 error npm  v3.10.10
+27 error code EIO
+28 error errno EIO
+29 error syscall write
+30 error write EIO
+31 error If you need help, you may report this error at:
+31 error     <https://github.com/npm/npm/issues>
+32 verbose exit [ 1, true ]
