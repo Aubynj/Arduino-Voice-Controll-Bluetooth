@@ -44,6 +44,15 @@
           </div> 
       </ion-list>
 
+      <ion-list no-lines>
+        <ion-list-header>Paired Devices</ion-list-header>
+          <div>
+              <button ion-item *ngFor="let paired of pairedDevices">
+                  {{ paired.name }}
+              </button> 
+          </div> 
+      </ion-list>
+
   
   
 </ion-content>
