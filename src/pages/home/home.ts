@@ -22,23 +22,29 @@ export class HomePage {
   scanStatus:string = "Scan";
   scanStarted:boolean = false;
 
+  //Getting unpaired devices
+  unpairedDevices : any;
+  pairedDevices : any;
+  gettingDevices : boolean;
+
 
   constructor(public navCtrl: NavController, private speechReg: SpeechRecognition, public change:ChangeDetectorRef,private btDevice:BluetoothSerial, public alertCtl:AlertController,public toastCtrl:ToastController) {
-    this.devices = [{
-      name : 'Microsoft',
-      id : '10.10.20.33',
-      address : '10.10.20.33'
-    },{
-      name : 'Android',
-      id : '11.11.90.33',
-      address : '11.11.90.33'
-    },{
-      name : 'IOS',
-      id : '100.20.12.54',
-      address : '100.20.12.54'
-    }];
+    // this.devices = [{
+    //   name : 'Microsoft',
+    //   id : '10.10.20.33',
+    //   address : '10.10.20.33'
+    // },{
+    //   name : 'Android',
+    //   id : '11.11.90.33',
+    //   address : '11.11.90.33'
+    // },{
+    //   name : 'IOS',
+    //   id : '100.20.12.54',
+    //   address : '100.20.12.54'
+    // }];
 
-    console.log(this.devices); 
+    // console.log(this.devices); 
+    btDevice.enable();
     
   }
 
@@ -68,6 +74,7 @@ export class HomePage {
   }
 
   scanBT(){
+    
     //Check of BT is turn on
     if(this.scanStarted == false){
      this.btDevice.isEnabled().then(
@@ -78,20 +85,38 @@ export class HomePage {
           }
         }
       )
-  
-      //this.btDevice.setDiscoverable(1);
+
+    //Setting devices to null
+      this.unpairedDevices = null;
+      this.pairedDevices = null;
+      this.gettingDevices = true;
+      this.devices = null;
+      
+      
   
      //Set unpaired discoverable devices
       this.btDevice.discoverUnpaired().then(
         (sucess) => {
+          
           this.devices = sucess;
           this.deviceAvailable = true;
+          this.gettingDevices = false;
+          
         },
         (err) => {
           console.log("Error occur in",err);
           this.deviceAvailable = false;
       }
-      ) 
+      )
+      this.btDevice.list().then((success)=>{
+        this.pairedDevices = success;
+      },
+    (err)=>{
+      console.log("Error occur in listing the devices");
+    })
+      
+      
+
      this.scanStarted = true;
      this.scanStatus = "Disconnect";
     }else if(this.scanStarted == true){
