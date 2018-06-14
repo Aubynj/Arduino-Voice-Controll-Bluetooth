@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar [color]="isRecording ? 'danger':'primary'">
     <ion-title>
       Voice Control Robot
     </ion-title>
@@ -12,47 +12,35 @@
  
 
   <p text-center>{{tabStatus}}</p>
-  
+    
 
-      <ion-row>
-        <ion-col col-4>
+    <ion-card-header><b>NB:</b>&nbsp;Robot Statistics</ion-card-header>
+    <ion-row>
+        <ion-col>
+        <span>{{dataFromArduino}}</span>
         </ion-col>
-        <ion-col col-4 justify-content-center>
-            <div class="row">
-              <div class="col" padding>
-                  <button class="toggleMe" id="change" ion-button round (click)="action()" [color]="isRecording ? 'danger' : 'primary'" large><ion-icon name="mic"></ion-icon></button>
-              </div>
-            </div>
-        </ion-col>
-        <ion-col col-4>
-        </ion-col>
-      </ion-row>
+    </ion-row>
+
+
+      <ion-fab center middle (click)="action()">
+        <button ion-fab [color]="isRecording ? 'danger':'primary'" mini><ion-icon name="mic"></ion-icon></button>
+      </ion-fab><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
 
         <ion-card-header>Voice Command</ion-card-header>
           <ion-list>
             <ion-item *ngFor="let match of matches">
-              {{ match }}
+              You said {{ match }}
             </ion-item>
           </ion-list>
 
       <ion-list no-lines>
-        <ion-list-header>Available Devices</ion-list-header>
-          <div *ngIf="!deviceAvailable">
-              <button ion-item *ngFor="let device of devices" (click)="selectDevice(device)">
-                  {{ device.name }}
-              </button> 
-          </div> 
-      </ion-list>
-
-      <ion-list no-lines>
         <ion-list-header>Paired Devices</ion-list-header>
           <div>
-              <button ion-item *ngFor="let paired of pairedDevices">
+              <button ion-item *ngFor="let paired of pairedDevices" (click)="selectDevice(paired)">
                   {{ paired.name }}
               </button> 
           </div> 
       </ion-list>
 
-  
-  
 </ion-content>

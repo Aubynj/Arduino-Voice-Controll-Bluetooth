@@ -1,13 +1,13 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /var/www/IonicPro/ArduinoVoiceProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-18:12
-INJECTED from /var/www/IonicPro/ArduinoVoiceProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-18:12
-INJECTED from /var/www/IonicPro/ArduinoVoiceProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-18:12
-INJECTED from /var/www/IonicPro/ArduinoVoiceProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-18:12
+ADDED from /var/www/IonicPro/ArduinoVoiceProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-19:12
+INJECTED from /var/www/IonicPro/ArduinoVoiceProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-19:12
+INJECTED from /var/www/IonicPro/ArduinoVoiceProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-19:12
+INJECTED from /var/www/IonicPro/ArduinoVoiceProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-19:12
 MERGED from [:CordovaLib] /var/www/IonicPro/ArduinoVoiceProject/platforms/android/CordovaLib/build/intermediates/manifests/full/debug/AndroidManifest.xml:20:1-27:12
-INJECTED from /var/www/IonicPro/ArduinoVoiceProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-18:12
-INJECTED from /var/www/IonicPro/ArduinoVoiceProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-18:12
-INJECTED from /var/www/IonicPro/ArduinoVoiceProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-18:12
+INJECTED from /var/www/IonicPro/ArduinoVoiceProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-19:12
+INJECTED from /var/www/IonicPro/ArduinoVoiceProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-19:12
+INJECTED from /var/www/IonicPro/ArduinoVoiceProject/platforms/android/app/src/main/AndroidManifest.xml:2:1-19:12
 	package
 		ADDED from /var/www/IonicPro/ArduinoVoiceProject/platforms/android/app/src/main/AndroidManifest.xml:2:98-124
 		INJECTED from /var/www/IonicPro/ArduinoVoiceProject/platforms/android/app/src/main/AndroidManifest.xml
@@ -102,3 +102,7 @@ uses-permission#android.permission.RECORD_AUDIO
 ADDED from /var/www/IonicPro/ArduinoVoiceProject/platforms/android/app/src/main/AndroidManifest.xml:17:5-71
 	android:name
 		ADDED from /var/www/IonicPro/ArduinoVoiceProject/platforms/android/app/src/main/AndroidManifest.xml:17:22-68
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /var/www/IonicPro/ArduinoVoiceProject/platforms/android/app/src/main/AndroidManifest.xml:18:5-79
+	android:name
+		ADDED from /var/www/IonicPro/ArduinoVoiceProject/platforms/android/app/src/main/AndroidManifest.xml:18:22-76

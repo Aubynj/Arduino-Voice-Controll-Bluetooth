@@ -8,10 +8,20 @@ import { BluetoothSerial } from '@ionic-native/bluetooth-serial';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { Starter } from '../pages/starter/starter';
+import { LeftPage } from '../pages/leftPage/left';
+import { RightPage } from '../pages/rightPage/right';
+import { BackPage } from '../pages/backpage/back';
+
+import { Network } from '@ionic-native/network';
 
 @NgModule({
   declarations: [
     MyApp,
+    Starter,
+    LeftPage,
+    RightPage,
+    BackPage,
     HomePage
   ],
   imports: [
@@ -21,6 +31,10 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    Starter,
+    LeftPage,
+    RightPage,
+    BackPage,
     HomePage
   ],
   providers: [
@@ -28,7 +42,8 @@ import { HomePage } from '../pages/home/home';
     SplashScreen,
     SpeechRecognition,
     BluetoothSerial,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Network
   ]
 })
 export class AppModule {}

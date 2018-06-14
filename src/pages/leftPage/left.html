@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-navbar [color]="isRecording ? 'danger' : 'dark'">
+      <ion-title>
+        Training Mode
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <p></p>
+
+  
+        <h3 *ngIf="!title"><span>Try saying {{ command }}</span></h3>
+        <ion-row>
+            <ion-col>
+                <span>{{speakText}}</span>
+            </ion-col>
+        </ion-row>
+
+        <ion-fab center middle (click)="sayLeft()" large>
+            <button ion-fab [color]="isRecording ? 'danger':'primary'"><ion-icon name="mic"></ion-icon></button>
+        </ion-fab><br><br><br><br><br><br><br><br><br><br><br><br> <br> <br><br><br>
+
+        <h5 center middle>{{ report }}</h5>
+        
+        
+
+        <ion-fab bottom right (click)="rightPage()" *ngIf="fabCheckedRight">
+          <button ion-fab color="dark"><ion-icon name="checkmark"></ion-icon></button>
+        </ion-fab>
+    
+  </ion-content>
+  

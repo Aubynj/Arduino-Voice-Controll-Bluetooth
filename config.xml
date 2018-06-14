@@ -83,5 +83,14 @@
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
     <plugin name="cordova-plugin-bluetooth-serial" spec="^0.4.7" />
     <plugin name="cordova-plugin-speechrecognition" spec="^1.2.0" />
+    <allow-navigation href="http://192.168.47.132:8101" />
+    <allow-navigation href="http://192.168.47.132:8102" />
+    <allow-navigation href="http://192.168.47.141:8105" />
+    <allow-navigation href="http://192.168.47.141:8106" />
+    <allow-navigation href="http://192.168.47.132:8103" />
+    <allow-navigation href="http://192.168.47.132:8100" />
+    <allow-navigation href="http://192.168.47.186:8100" />
+    <allow-navigation href="http://192.168.47.186:8101" />
+    <allow-navigation href="http://192.168.15.185:8100" />
     <engine name="android" spec="~7.0.0" />
 </widget>

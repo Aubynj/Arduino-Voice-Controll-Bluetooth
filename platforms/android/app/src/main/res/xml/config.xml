@@ -17,6 +17,9 @@
         <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="NetworkStatus">
+        <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
+    </feature>
     <feature name="Keyboard">
         <param name="android-package" onload="true" value="io.ionic.keyboard.IonicKeyboard" />
     </feature>
@@ -31,6 +34,15 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <allow-navigation href="http://192.168.47.132:8101" />
+    <allow-navigation href="http://192.168.47.132:8102" />
+    <allow-navigation href="http://192.168.47.141:8105" />
+    <allow-navigation href="http://192.168.47.141:8106" />
+    <allow-navigation href="http://192.168.47.132:8103" />
+    <allow-navigation href="http://192.168.47.132:8100" />
+    <allow-navigation href="http://192.168.47.186:8100" />
+    <allow-navigation href="http://192.168.47.186:8101" />
+    <allow-navigation href="http://192.168.15.185:8100" />
     <allow-intent href="market:*" />
     <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />
     <icon density="mdpi" src="resources/android/icon/drawable-mdpi-icon.png" />
